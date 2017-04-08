@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: lemonwaykit
-Version: 0.1
+Version: 1.0
 Summary: Python API to access Lemonway web services.
 Home-page: https://gitlab.com/N.Costantino/LemonWayKit
 Author: Nicola Costantino
@@ -26,6 +26,7 @@ Classifier: Framework :: Django
 Classifier: Framework :: Django :: 1.8
 Classifier: Framework :: Django :: 1.9
 Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
 Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent

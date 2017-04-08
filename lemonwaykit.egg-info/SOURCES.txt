@@ -5,6 +5,7 @@ setup.py
 lemonwaykit/__init__.py
 lemonwaykit/constants.py
 lemonwaykit/exceptions.py
+lemonwaykit/models.py
 lemonwaykit/utils.py
 lemonwaykit.egg-info/PKG-INFO
 lemonwaykit.egg-info/SOURCES.txt

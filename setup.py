@@ -9,10 +9,10 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='lemonwaykit',
-    version='0.1',
+    version='1.0',
     packages=find_packages(),
     include_package_data=True,
-    license='MIT License',  # example license
+    license='MIT License',
     description='Python API to access Lemonway web services.',
     long_description=README,
     url='https://gitlab.com/N.Costantino/LemonWayKit',
@@ -24,8 +24,9 @@ setup(
         'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.9',
         'Framework :: Django :: 1.10',
+        'Framework :: Django :: 1.11',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',  # example license
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         # Replace these appropriately if you are stuck on Python 2.
