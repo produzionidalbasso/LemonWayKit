@@ -8,7 +8,7 @@ VALID_LEMONWAY_METHOD_PARAMETERS = {
         "wallet", "clientName", "clientMail", "clientTitle", "clientFirstName", "clientLastName", "street",
         "postCode", "city", "ctry", "birthdate", "phoneNumber", "mobileNumber", "isCompany", "companyName",
         "companyWebsite", "companyDescription", "companyIdentificationNumber", "idDebtor", "nationality",
-        "birthcity", "birthcountry", "isOneTimeCustomer"
+        "birthcity", "birthcountry", "isOneTimeCustomer", "payerOrBeneficiary"
     ],
     'UpdateWalletDetails': [
         "wallet", "newEmail", "newTitle", "newFirstName", "newLastName", "newStreet", "newPostCode", "newCity",
