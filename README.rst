@@ -13,4 +13,4 @@ Installation
 
 Install it with ``pip``:
 
-    pip install git+https://gitlab.com/N.Costantino/LemonWayKit.git
+    pip install git+https://gitlab.com/frankhood/LemonWayKit.git
