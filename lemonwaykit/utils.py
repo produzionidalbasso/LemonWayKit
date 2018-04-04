@@ -55,7 +55,7 @@ class LemonWayKit(object):
     def get_web_kit_url(self, dev):
         from django.conf import settings
         domain = getattr(settings, 'LEMONWAY_WEB_KIT_DOMAIN', 'https://m.lemonway.fr')
-        url = "{domain}/mb/{enviroment}/{dev}/".format(
+        url = "{domain}/{enviroment}/{dev}/".format(
             domain=domain,
             enviroment=self._environment,
             dev=("dev" if dev else "prod")
