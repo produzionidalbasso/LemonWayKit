@@ -264,8 +264,8 @@ class LemonWayKit(object):
         if self._direct_kit_css:
             url = "%s&p=%s" % (url, self._direct_kit_css)
         # ATOS v2 contracts
-        if self.template_name:
-            url = "%s&tpl=%s" % (url, self.template_name)
+        if template_name:
+            url = "%s&tpl=%s" % (url, template_name)
         return url
 
     #####################
