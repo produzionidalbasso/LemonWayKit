@@ -256,10 +256,13 @@ class LemonWayKit(object):
     #####################
     #####################
 
-    def create_money_in_web_url(self, token, template_name=None):
+    def create_money_in_web_url(self, token, template_name=None, web_kit_url=None):
         # Finalize card payment, indirect mode
         # http://documentation.lemonway.fr/api-en/webkit/finalize-card-payment-indirect-mode
-        url = "%s?moneyInToken=%s&lang=%s" % (self._web_kit_url, token, self._language)
+        if not web_kit_url:
+            url = "%s?moneyInToken=%s&lang=%s" % (self._web_kit_url, token, self._language)
+        else:
+            url = "%s?moneyInToken=%s&lang=%s" % (web_kit_url, token, self._language)
         # ATOS v1 contracts
         if self._direct_kit_css:
             url = "%s&p=%s" % (url, self._direct_kit_css)
