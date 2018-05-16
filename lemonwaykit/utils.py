@@ -33,8 +33,9 @@ class LemonWayKit(object):
 
         self._direct_kit_css = direct_kit_css
 
-        self._direct_kit_url = "https://ws.lemonway.fr/mb/%s/%s/directkit/service.asmx" % (
-            self._environment, "dev" if dev else "prod"
+        self._direct_kit_domain = 'https://sandbox-api.lemonway.fr' if dev else 'https://ws.lemonway.fr'
+        self._direct_kit_url = "%s/mb/%s/%s/directkit/service.asmx" % (
+            self._direct_kit_domain, self._environment, "dev" if dev else "prod"
         )
 
         # print("direct_kit_url : %s"%self._direct_kit_url)
