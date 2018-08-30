@@ -6,6 +6,7 @@ Home-page: https://gitlab.com/N.Costantino/LemonWayKit
 Author: Nicola Costantino
 Author-email: n.costantino@frankhood.it
 License: MIT License
+Description-Content-Type: UNKNOWN
 Description: =====
         LemonWayKit
         =====
@@ -14,12 +15,15 @@ Description: =====
         
         Detailed documentation is in the "docs" directory.
         
+        Forked from: https://bitbucket.org/gnucoop/lemonwaykit
+        
         Installation
         ============
         
         Install it with ``pip``:
         
-        	pip install git+https://gitlab.com/N.Costantino/LemonWayKit.git
+            pip install git+https://gitlab.com/frankhood/LemonWayKit.git
+        
 Platform: UNKNOWN
 Classifier: Environment :: Web Environment
 Classifier: Framework :: Django
