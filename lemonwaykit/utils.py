@@ -313,7 +313,7 @@ class LemonWayKit(object):
             'walletIp': self._wallet_ip,
             'walletUa': self._wallet_ua
         })
-        print("LWKIT call to method %s with params : %s for environment '%s'  direct_kit : %s"%(method,str(params),self._environment), self._direct_kit_url)
+        print("LWKIT call to method %s with params : %s for environment '%s'  direct_kit : %s"%(method,str(params),self._environment, self._direct_kit_url))
         res = getattr(self._client, method)(**params)
         print("res : %s" % str(res.as_xml))
         return LemonWayKit._parse_response(method, res)
