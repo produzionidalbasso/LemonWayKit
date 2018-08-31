@@ -14,7 +14,7 @@ VALID_LEMONWAY_METHOD_PARAMETERS = {
         "wallet", "newEmail", "newTitle", "newFirstName", "newLastName", "newStreet", "newPostCode", "newCity",
         "newCtry", "newIp", "newPhoneNumber", "newMobileNumber", "newBirthDate", "newIsCompany", "newCompanyName",
         "newCompanyWebsite", "newCompanyDescription", "newCompanyIdentificationNumber", "newIsDebtor",
-        "newNationality", "newBirthcity", "newBirthcountry"
+        "newNationality", "newBirthcity", "newBirthcountry","newPayerOrBeneficiary"
     ],
     'UpdateWalletStatus': [
         "wallet", "newStatus"
