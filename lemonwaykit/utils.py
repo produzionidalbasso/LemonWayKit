@@ -300,7 +300,7 @@ class LemonWayKit(object):
     def _make_request(self, method, version, **kwargs):
         params = {}
         for key in kwargs:
-            print("key %s and value %s (type : %s) for LW method : %s"%(key, kwargs.get(key), type(kwargs.get(key)), method))
+            logger.warning("key %s and value %s (type : %s) for LW method : %s"%(key, kwargs.get(key), type(kwargs.get(key)), method))
             if key not in VALID_LEMONWAY_METHOD_PARAMETERS.get(method):
                 raise LemonWayInvalidParameterError()
             params.update({key: kwargs.get(key)})
@@ -313,7 +313,7 @@ class LemonWayKit(object):
             'walletIp': self._wallet_ip,
             'walletUa': self._wallet_ua
         })
-        print("LWKIT call to method %s with params : %s for environment '%s'  direct_kit : %s"%(method,str(params),self._environment, self._direct_kit_url))
+        logger.warning("LWKIT call to method %s with params : %s for environment '%s'  direct_kit : %s"%(method,str(params),self._environment, self._direct_kit_url))
         res = getattr(self._client, method)(**params)
-        print("res : %s" % str(res.as_xml))
+        logger.warning("res : %s" % str(res.as_xml))
         return LemonWayKit._parse_response(method, res)
