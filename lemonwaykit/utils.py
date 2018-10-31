@@ -50,7 +50,7 @@ class LemonWayKit(object):
             namespace=self._namespace,
             trace=False
         )
-        print 'lmk ', locals()
+        # print 'lmk ', locals()
         # print("self._client : %s"%self._client)
 
     def get_web_kit_url(self, dev):
