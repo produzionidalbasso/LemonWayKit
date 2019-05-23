@@ -8,13 +8,13 @@ VALID_LEMONWAY_METHOD_PARAMETERS = {
         "wallet", "clientName", "clientMail", "clientTitle", "clientFirstName", "clientLastName", "street",
         "postCode", "city", "ctry", "birthdate", "phoneNumber", "mobileNumber", "isCompany", "companyName",
         "companyWebsite", "companyDescription", "companyIdentificationNumber", "idDebtor", "nationality",
-        "birthcity", "birthcountry", "isOneTimeCustomer", "payerOrBeneficiary"
+        "birthcity", "birthcountry", "isOneTimeCustomer", "payerOrBeneficiary", "isOneTimeCustomer"
     ],
     'UpdateWalletDetails': [
         "wallet", "newEmail", "newTitle", "newFirstName", "newLastName", "newStreet", "newPostCode", "newCity",
         "newCtry", "newIp", "newPhoneNumber", "newMobileNumber", "newBirthDate", "newIsCompany", "newCompanyName",
         "newCompanyWebsite", "newCompanyDescription", "newCompanyIdentificationNumber", "newIsDebtor",
-        "newNationality", "newBirthcity", "newBirthcountry","newPayerOrBeneficiary"
+        "newNationality", "newBirthcity", "newBirthcountry","newPayerOrBeneficiary","newCompanyWebsite"
     ],
     'UpdateWalletStatus': [
         "wallet", "newStatus"
@@ -24,7 +24,7 @@ VALID_LEMONWAY_METHOD_PARAMETERS = {
     ],
     'MoneyIn': [
         "wallet", "cardType", "cardNumber", "cardCrypto", "cardDate", "amountTot", "amountCom", "comment",
-        "autoCommission", "isPreAuth", "wkToken", "specialConfig"
+        "autoCommission", "isPreAuth", "wkToken", "specialConfig",
     ],
     'MoneyIn3DInit': [
         "wallet", "amountTot", "amountCom", "comment", "wkToken", "cardType", "cardNumber", "cardCode", "cardDate",
@@ -36,7 +36,7 @@ VALID_LEMONWAY_METHOD_PARAMETERS = {
     ],
     'MoneyInWebInit': [
         "wallet", "amountTot", "amountCom", "comment", "useRegisteredCard", "wkToken", "returnUrl", "cancelUrl",
-        "errorUrl", "autoCommission", "registerCard"
+        "errorUrl", "autoCommission", "registerCard","isPreAuth", "delayedDays",
     ],
     'RegisterCard': [
         "wallet", "cardType", "cardNumber", "cardCode", "cardDate", "specialConfig"
@@ -48,7 +48,7 @@ VALID_LEMONWAY_METHOD_PARAMETERS = {
         "wallet", "cardId", "amountTot", "amountCom", "message", "autoCommission", "isPreAuth", "specialConfig"
     ],
     'MoneyInValidate': [
-        "transactionId", "specialConfig"
+        "transactionId", "specialConfig", "amountTot", "amountCom"
     ],
     'SendPayment': [
         "debitWallet", "creditWallet", "amount", "message", "scheduledDate", "privateData"
