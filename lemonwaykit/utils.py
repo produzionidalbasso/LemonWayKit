@@ -43,25 +43,13 @@ class LemonWayKit(object):
         self._direct_kit_css = direct_kit_css
 
         self._direct_kit_domain = 'https://sandbox-api.lemonway.fr' if dev else 'https://ws.lemonway.fr'
-        # self._direct_kit_url = "%s/mb/%s/%s/directkit/service.asmx" % (
-        #     self._direct_kit_domain, self._environment, "dev" if dev else "prod"
-        # )
+
         self._direct_kit_url = "%s/mb/%s/%s/directkit/service.asmx?WSDL" % (
             self._direct_kit_domain, self._environment, "dev" if dev else "prod"
         )
 
-        # print("direct_kit_url : %s"%self._direct_kit_url)
         self._web_kit_url = self.get_web_kit_url(dev)
-        # print("web_kit_url : %s"%self._web_kit_url)
-        # self._client = SoapClient(
-        #     location=self._direct_kit_url,
-        #     cache=None,
-        #     timeout=self._timeout,
-        #     soap_ns=self._soap_ns,
-        #     action=self._action,
-        #     namespace=self._namespace,
-        #     trace=False
-        # )
+
         transport = Transport(timeout=self._timeout)
         self._client = zeep.Client(
             wsdl=self._direct_kit_url,
@@ -305,15 +293,12 @@ class LemonWayKit(object):
         try:
             res_xml_dict = xmltodict.parse(res)
             res_xml = json.loads(json.dumps(res_xml_dict))
-            print("###################### {0}".format(res_xml))
+            logger.warning("res_dict : %s" % res_xml)
             if 'E' in res_xml:
                 logger.error("LWKIT Error %s : %s " % (int(res_xml.get('E').get('Code')), str(res_xml.get('E').get('Msg'))))
                 raise LemonWayApiMethodError(int(res_xml.get('E').get('Code')), str(res_xml.get('E').get('Msg')), int(res_xml.get('E').get('Prio')))
 
             return res_xml
-            # res_xml_dict_temp = xmltodict.parse(res)
-            # keys = res_xml_dict_temp.popitem()
-            # res_xml = Struct(**res_xml_dict[keys[0]])
         except LemonWayApiMethodError as ex:
             raise ex
         except Exception as ex:
@@ -324,7 +309,7 @@ class LemonWayKit(object):
     def _make_request(self, method, version, **kwargs):
         params = {}
         for key in kwargs:
-            logger.warning("key %s and value %s (type : %s) for LW method : %s"%(key, kwargs.get(key), type(kwargs.get(key)), method))
+            # logger.warning("key %s and value %s (type : %s) for LW method : %s"%(key, kwargs.get(key), type(kwargs.get(key)), method))
             if key not in VALID_LEMONWAY_METHOD_PARAMETERS.get(method):
                 raise LemonWayInvalidParameterError()
             params.update({key: kwargs.get(key)})
