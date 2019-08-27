@@ -45,7 +45,7 @@ VALID_LEMONWAY_METHOD_PARAMETERS = {
         "wallet", "cardId"
     ],
     'MoneyInWithCardId': [
-        "wallet", "cardId", "amountTot", "amountCom", "message", "autoCommission", "isPreAuth", "specialConfig"
+        "wallet", "cardId", "amountTot", "amountCom", "message", "autoCommission", "isPreAuth", "specialConfig", "comment"
     ],
     'MoneyInValidate': [
         "transactionId", "specialConfig", "amountTot", "amountCom"
