@@ -7,7 +7,6 @@ import xmltodict
 import zeep
 import json
 
-from pysimplesoap.client import SoapClient, SimpleXMLElement
 from zeep.transports import Transport
 
 from .exceptions import LemonWayInvalidParameterError, LemonWayApiMethodError
