@@ -277,6 +277,16 @@ class LemonWayKit(object):
             url = "%s&tpl=%s" % (url, template_name)
         return url
 
+    def create_signin_document_web_url(self, token, web_kit_url=None):
+        # Finalize document signature
+        # http://documentation.lemonway.fr/api-en/webkit/finalize-document-signature
+        if not web_kit_url:
+            url = "%s?signingtoken=%s" % (self._web_kit_url, token)
+        else:
+            url = "%s?signingtoken=%s" % (web_kit_url, token)
+
+        return url
+
     #####################
     #####################
     ###  ??????? ########

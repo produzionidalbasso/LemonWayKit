@@ -96,7 +96,7 @@ VALID_LEMONWAY_METHOD_PARAMETERS = {
         "transactionId"
     ],
     'RegisterSddMandate': [
-        "wallet", "holder", "bic", "iban", "isRecurring", "street", "postCode", "city", "country"
+        "wallet", "holder", "bic", "iban", "isRecurring", "street", "postCode", "city", "country", "isRecurring","mandateLanguage",
     ],
     'UnregisterSddMandate': [
         "wallet", "sddMandateId"
