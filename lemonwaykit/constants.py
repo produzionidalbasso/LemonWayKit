@@ -36,7 +36,7 @@ VALID_LEMONWAY_METHOD_PARAMETERS = {
     ],
     'MoneyInWebInit': [
         "wallet", "amountTot", "amountCom", "comment", "useRegisteredCard", "wkToken", "returnUrl", "cancelUrl",
-        "errorUrl", "autoCommission", "registerCard","isPreAuth", "delayedDays",
+        "errorUrl", "autoCommission", "registerCard","isPreAuth", "delayedDays","paymentPattern"
     ],
     'RegisterCard': [
         "wallet", "cardType", "cardNumber", "cardCode", "cardDate", "specialConfig"
