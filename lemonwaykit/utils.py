@@ -94,7 +94,7 @@ class LemonWayKit(object):
     def upload_file(self, version="1.1", **kwargs):
         return self._make_request('UploadFile', version, **kwargs)
 
-    def get_kyc_status(self, version="1.5", **kwargs):
+    def get_kyc_status(self, version="1.6", **kwargs):
         return self._make_request('GetKycStatus', version, **kwargs)
 
     def update_wallet_status(self, version="1.0", **kwargs):
